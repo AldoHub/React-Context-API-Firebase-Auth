@@ -4,15 +4,8 @@ import "firebase/firestore";
 import "firebase/storage";
 
 const config = {
-    apiKey: "AIzaSyD0l1wxv8WACc6pZp5SJWB1RkCyl-cHfAk",
-    authDomain: "react-context-auth-8b4c8.firebaseapp.com",
-    databaseURL: "https://react-context-auth-8b4c8.firebaseio.com",
-    projectId: "react-context-auth-8b4c8",
-    storageBucket: "react-context-auth-8b4c8.appspot.com",
-    messagingSenderId: "947817758940",
-    appId: "1:947817758940:web:797cb472c159cd4436b419"
+  //firebase config
 }
-
 class Firebase{
 
     constructor(){
