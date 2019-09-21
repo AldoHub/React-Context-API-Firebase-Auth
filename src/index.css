@@ -1,13 +1,247 @@
+
+html {
+  height: 100%;
+  min-width: 100%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  font-family: "Hind";
+  background: #eee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body * {
+  transition: background-size 1s ease-in-out;
 }
+
+header {
+  height: 500px;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1503931508974-4ff1b4bfdb8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80") center;
+  background-size: 100%;
+}
+
+header div {
+  margin-left: 10%;
+  width: 60%;
+}
+
+header div h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+  margin: 0px;
+  padding-top: 70px;
+ 
+}
+
+header div p {
+  width: 40%;
+ 
+}
+
+.processing {
+  width: 40%;
+  margin: 120px auto;
+  text-align: center;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  justify-content: space-between;
+  color: #111;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px 10px;
+  margin: 10px 0px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #111;
+  text-transform: lowercase;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav ul:first-of-type li:first-of-type{
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+
+.posts {
+  padding-top: 30px;
+  padding-bottom: 80px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  width: 350px;
+  min-width: 300px;
+  position: relative;
+  
+}
+
+
+.post > a div{
+  display: block;
+  height: 350px;
+  background-position: center !important;
+  background-size: 200%; 
+
+}
+
+.post:hover > a div{
+  background-size: 100%;
+  
+}
+
+.post > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+  text-align: right;
+}
+
+
+.single {
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.single > img {
+  width: 100%;
+}
+
+.process {
+  display: block;
+  color: rgb(3, 190, 150);
+  font-size: 3rem;
+}
+
+
+form {
+  width: 60%;
+  margin: 0 auto;
+  max-width: 900px;
+ 
+}
+
+form * {
+  width: 100%;
+  padding: 10px 0px;
+  border: none;
+  display: block;
+}
+
+.editForm{
+  width: 100%;
+}
+
+.edit, .delete, .logout {
+  background: none;
+  padding: 10px;
+  border: none;
+ 
+}
+
+.edit {
+  border: 1px solid #222;
+  color: #222;
+  margin-top: 40px;
+}
+
+.logout {
+  border: 1px solid #222;
+  color: #222;
+}
+
+ .delete {
+  background:rgb(250, 60, 60);
+  color: #eee; 
+  margin-top: 120px;
+ }
+
+ .loader,
+ .loader:before,
+ .loader:after {
+   border-radius: 50%;
+ }
+ .loader {
+   color: rgb(3, 190, 150);
+   font-size: 11px;
+   text-indent: -99999em;
+   margin: 55px auto;
+   position: relative;
+   width: 10em;
+   height: 10em;
+   box-shadow: inset 0 0 0 1em;
+   -webkit-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   transform: translateZ(0);
+ }
+ .loader:before,
+ .loader:after {
+   position: absolute;
+   content: '';
+ }
+ .loader:before {
+   width: 5.2em;
+   height: 10.2em;
+   background: #eee;
+   border-radius: 10.2em 0 0 10.2em;
+   top: -0.1em;
+   left: -0.1em;
+   -webkit-transform-origin: 5.2em 5.1em;
+   transform-origin: 5.2em 5.1em;
+   -webkit-animation: load2 2s infinite ease 1.5s;
+   animation: load2 2s infinite ease 1.5s;
+ }
+ .loader:after {
+   width: 5.2em;
+   height: 10.2em;
+   background: #eee;
+   border-radius: 0 10.2em 10.2em 0;
+   top: -0.1em;
+   left: 5.1em;
+   -webkit-transform-origin: 0px 5.1em;
+   transform-origin: 0px 5.1em;
+   -webkit-animation: load2 2s infinite ease;
+   animation: load2 2s infinite ease;
+ }
+ @-webkit-keyframes load2 {
+   0% {
+     -webkit-transform: rotate(0deg);
+     transform: rotate(0deg);
+   }
+   100% {
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+   }
+ }
+ @keyframes load2 {
+   0% {
+     -webkit-transform: rotate(0deg);
+     transform: rotate(0deg);
+   }
+   100% {
+     -webkit-transform: rotate(360deg);
+     transform: rotate(360deg);
+   }
+ }
+ 
